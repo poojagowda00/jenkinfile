@@ -4,7 +4,7 @@ stages {
 stage('First stage')
 {
 steps {
- git 'https://github.com/poojagowda00/jenkinfile.git'
+ git 'https://github.com/poojagowda00/project.git'
 }
 }
 stage('Second stage')
