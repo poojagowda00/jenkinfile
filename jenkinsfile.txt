@@ -1,0 +1,29 @@
+pipeline {
+agent any
+stages {
+stage('First stage')
+{
+steps {
+ git branch: 'main', url: 'https://github.com/poojagowda00/maven.git'
+}
+}
+stage('Second stage')
+{
+steps {
+ build 'maven_integration'
+}
+}
+stage('Third stage')
+{
+steps {
+echo 'This is testing phase'
+}
+}
+stage('Fourth stage')
+{
+steps{
+echo 'This is deploy phase'
+}
+}
+}
+}
